@@ -34,6 +34,11 @@
 
 <b> # ! Blue Virtual Nerds ! # </b>
 
+<br>
+
+--------------------------------------
+
+<br>
 
 <h1> How to run SaUR0N </h1>
 
