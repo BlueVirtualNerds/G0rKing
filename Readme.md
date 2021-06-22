@@ -27,11 +27,12 @@
 <li> Jisso Jose </li>
 <li> Prateek Bhattacharya </li>
 
+<br>
 
-We were all known as the team:
+<i>We were all known as the team:</i>
 	
 
-<b><em> # ! Blue Virtual Nerds ! # </em></b>
+<b> # ! Blue Virtual Nerds ! # </b>
 
 
 <h1> How to run SaUR0N </h1>
