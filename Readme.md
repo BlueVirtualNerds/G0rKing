@@ -14,7 +14,7 @@
 
 1. SaUR0N - Google Dorking Tool written in Python3
 2. Google and PyFiglet - Installable Requirements
-3. Google Dorking Usage and Easy Reference - text file
+3. Google Dorking Usage and Easy Reference - Text File
 4. Website hosting the educational content - http://www.sauron.in
 
 
