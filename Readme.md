@@ -18,7 +18,7 @@
 4. Website hosting the educational content - http://www.sauron.in
 
 
-					#### The Project Team members #### -
+					#### The Project Team members ####
     
 <li> Vishal Soni </li>
 <li> Dhanaraj K S </li>
@@ -28,7 +28,7 @@
 <li> Prateek Bhattacharya </li>
 
 
-	We were all known as the team:
+We were all known as the team:
 	
 
 <b><em> # ! Blue Virtual Nerds ! # </em></b>
