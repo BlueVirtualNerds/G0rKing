@@ -1,0 +1,103 @@
+#!/usr/bin/env/python3
+# This Python file uses the following encoding: utf-8
+# pyfiglet only supports Python3
+
+# Capstone Project #
+
+
+
+from __future__ import print_function
+try:
+    from googlesearch import search
+
+except ImportError:
+    print("")
+
+import sys
+import time
+
+
+# SaUR0n Core Code
+
+
+if sys.version[0] in "2":
+    print ("\n[x] SaUR0n has not been developed for python 2.x Use Python 3.x \n")
+    print ("\n\n OSINT is always the best!!!\n\n")
+    exit()
+
+import pyfiglet
+
+ascii_banner = pyfiglet.figlet_format("SaUR0n")
+print(ascii_banner)
+
+print("\t Author: Blue Virtual Nerds \n")
+print("\t Website: http://www.sauron.in \n")
+print("\t A project for : COHORT-3 \n")
+
+
+try:
+    data = input("\n[+] Step 1: Would you like to save the Results ? (y/n) ").strip()
+    log = ("")
+
+except KeyboardInterrupt:
+        print ("\n")
+        print ("\033[1;91m[!] User Interruption Detected..!\033[0")
+        time.sleep(0.5)
+        print ("\n\n\t\033[1;91m[!] Would love to see you back...Thanks!!! \033\n\n")
+        time.sleep(0.5)
+        sys.exit(1)
+
+
+def logger(data):
+    file = open((log) + ".txt", "a")
+    file.write(str(data))
+    file.write("\n")
+    file.close()
+
+
+if data.startswith("y" or "Y"):
+    log = input("[~] Step 1.1: What would be the name of this text file : ")
+    print ("\n" + "  " + "»" * 78 + "\n")
+else:
+    print ("[!] Not saving the results...")
+    print ("\n" + "  " + "»" * 78 + "\n")
+
+
+def dorks():
+    try:
+        dork = input("\n[+] Step 2: Enter Your Dork Search Query/String: ")
+        amount = input("[+] Step 3: How many websites do you want to display ?: ")
+        print ("\n ")
+
+        cycle = 0
+        counter = 0
+
+        for results in search(dork, num=int(amount), pause=2):
+            counter = counter + 1
+            print ("[+] ", counter, results)
+            time.sleep(0.1)
+            cycle = cycle + 1
+            data = (counter, results)
+            logger(data)
+            if cycle >= int(amount):
+                break
+
+            time.sleep(0.1)
+
+    except KeyboardInterrupt:
+            print ("\n")
+            print ("\033[1;91m[!] Interruption Detected..!\033[0")
+            time.sleep(0.5)
+            print ("\n\n\t\033[1;91m[!] Would love to see you back!! \033\n\n")
+            time.sleep(0.5)
+            sys.exit(1)
+
+    print ("[•] Done... Exiting...")
+    print ("\n\t\t\t\t\033[34mSaUR0n\033[0m")
+    print ("\t\t\033[1;91m[!] Hope you loved the Tool !!! \033\n\n")
+    sys.exit()
+
+
+#********# Main #*********#
+if __name__ == "__main__":
+    dorks()
