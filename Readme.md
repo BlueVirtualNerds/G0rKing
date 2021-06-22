@@ -20,12 +20,12 @@ The objective of SaUR0N is to automate the Google Dorking process and offers a w
 
 					#### The Project Team members #### -
     
-Mr. Vishal Soni
-Mr. Dhanaraj K S
-Mrs. Neelakshi Sahni
-Mr. Gagan Nagpal
-Mr. Jisso Jose
-Mr. Prateek Bhattacharya
+# Mr. Vishal Soni
+# Mr. Dhanaraj K S
+# Mrs. Neelakshi Sahni
+# Mr. Gagan Nagpal
+# Mr. Jisso Jose
+# Mr. Prateek Bhattacharya
 
 We were all known as the team:
 #"Blue Virtual Nerds"#!
