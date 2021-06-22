@@ -29,7 +29,7 @@
 
 <br>
 
-<i>We were all known as the team:</i>
+<i>We were known as the team:</i>
 	
 
 <b> # ! Blue Virtual Nerds ! # </b>
