@@ -1,16 +1,16 @@
-					#### Purpose ####:
+					<h1> #### Purpose ####: </h1>
 
 SaUR0N was created as the Capstone Project delivery for the completion of the COHORT-3 course and certification.
 COHORT-3 was offered through the joint initiative of IIT, Kanpur and Talentsprint in the year 2021.
 The course title is "Advanced Certification Program in Cyber Security and Cyber Defense"
 
 
-					#### Objective ####:
+					<h1> #### Objective ####: </h1>
 
 The objective of SaUR0N is to automate the Google Dorking process and offers a way to save the end results in a text file for easy reference and reporting purposes.
 
 
-					#### Project Content ####:
+					<h1> #### Project Content ####: </h1>
 
 1. SaUR0N - Google Dorking Tool written in Python3
 2. Google and PyFiglet - Installable Requirements
@@ -20,25 +20,25 @@ The objective of SaUR0N is to automate the Google Dorking process and offers a w
 
 					#### The Project Team members #### -
     
-# Mr. Vishal Soni
-# Mr. Dhanaraj K S
-# Mrs. Neelakshi Sahni
-# Mr. Gagan Nagpal
-# Mr. Jisso Jose
-# Mr. Prateek Bhattacharya
+> Vishal Soni
+> Dhanaraj K S
+> Neelakshi Sahni
+> Gagan Nagpal
+> Jisso Jose
+> Prateek Bhattacharya
 
 We were all known as the team:
-#"Blue Virtual Nerds"#!
+<h1> # ! Blue Virtual Nerds ! # </h1>
 
 
 
-				####--- How to run SaUR0N ---####
+				<h2> ####--- How to run SaUR0N ---#### </h2>
 
-1. Download the project from Github
-2. $ cd SaUR0N
-3. $ pip3 install -r requirements.txt
-4. $ python3 sauron
-5. .....then follow the onscreen guide
+> Download the project from Github
+> $ cd SaUR0N
+> $ pip3 install -r requirements.txt
+> $ python3 sauron
+> .....then follow the onscreen guide
 
 
-				*************** Thank You *******************
+				<h1> *************** Thank You ******************* </h1>
