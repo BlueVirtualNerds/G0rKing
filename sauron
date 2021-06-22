@@ -32,7 +32,8 @@ print(ascii_banner)
 
 print("\t Author: Blue Virtual Nerds \n")
 print("\t Website: http://www.sauron.in \n")
-print("\t A project for : COHORT-3 \n")
+print("\t GitHub: https://github.com/BlueVirtualNerds/SaUR0N \n")
+print("\t A project for : IITK COHORT-3 \n")
 
 
 try:
