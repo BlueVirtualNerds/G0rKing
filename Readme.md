@@ -19,6 +19,7 @@
 
 
 					#### The Project Team members ####
+<br> 
     
 <li> Vishal Soni </li>
 <li> Dhanaraj K S </li>
@@ -29,26 +30,23 @@
 
 <br>
 
-<i>We were known as the team:</i>
-	
-
-<b> # ! Blue Virtual Nerds ! # </b>
+<i>We were known as the team:</i> <b> # ! Blue Virtual Nerds ! # </b>
 
 <br>
 
 --------------------------------------
 
-<br>
 
 <h1> How to run SaUR0N </h1>
 
-Download the project from Github
+Follow the commands now ...
 ```
+$ git clone https://github.com/BlueVirtualNerds/SaUR0N
 $ cd SaUR0N
 $ pip3 install -r requirements.txt
 $ python3 sauron
 ```
-.....then follow the onscreen guide
+.....and now follow the on-screen guide
 
 
 				*************** Thank You *******************
