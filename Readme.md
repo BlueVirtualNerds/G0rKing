@@ -35,7 +35,7 @@ We were all known as the team:
 				####--- How to run SaUR0N ---####
 
 1. Download the project from Github
-2. $ cd IITProject/sauron
+2. $ cd SaUR0N
 3. $ pip3 install -r requirements.txt
 4. $ python3 sauron
 5. .....then follow the onscreen guide
