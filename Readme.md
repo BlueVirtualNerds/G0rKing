@@ -20,16 +20,16 @@
 
 					#### The Project Team members #### -
     
-	<li> Vishal Soni </li>
-	<li> Dhanaraj K S </li>
-	<li> Neelakshi Sahni </li>
-	<li> Gagan Nagpal </li>
-	<li> Jisso Jose </li>
-	<li> Prateek Bhattacharya </li>
+<li> Vishal Soni </li>
+<li> Dhanaraj K S </li>
+<li> Neelakshi Sahni </li>
+<li> Gagan Nagpal </li>
+<li> Jisso Jose </li>
+<li> Prateek Bhattacharya </li>
 
 We were all known as the team:
 
-	<h1> # ! Blue Virtual Nerds ! # </h1>
+<em> # ! Blue Virtual Nerds ! # </em>
 
 
 
