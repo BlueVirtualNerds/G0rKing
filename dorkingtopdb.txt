@@ -1,0 +1,5 @@
+ext:inc "pwd=" "UID="
+ext:ini intext:env.ini
+filetype:dat "password.dat
+filetype:inc intext:mysql_connect
+filetype:sql password
