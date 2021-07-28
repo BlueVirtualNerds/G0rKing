@@ -1,9 +1,9 @@
-
-# Capstone Project #
 #!/usr/bin/env/python3
 # This Python file uses the following encoding: utf-8
 # pyfiglet only supports Python3
 
+
+# Capstone Project #
 
 from __future__ import print_function
 try:
