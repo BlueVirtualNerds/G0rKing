@@ -1,13 +1,9 @@
-#!/usr/bin/env/python3
-# This Python file uses the following encoding: utf-8
-# pyfiglet only supports Python3
 
 # Capstone Project #
 #!/usr/bin/env/python3
 # This Python file uses the following encoding: utf-8
 # pyfiglet only supports Python3
 
-# Capstone Project #
 
 from __future__ import print_function
 try:
@@ -18,7 +14,7 @@ except ImportError:
 
 import sys
 import time
-
+import pyfiglet
 
 # SaUR0n Core Code
 log = "latestrun" + str(time.time())
@@ -28,7 +24,7 @@ if sys.version[0] in "2":
     print ("\n\n OSINT is always the best!!!\n\n")
     exit()
 
-import pyfiglet
+
 
 ascii_banner = pyfiglet.figlet_format("SaUR0n")
 print(ascii_banner)
@@ -73,7 +69,7 @@ def fileSavingChoice():
 
 
 
-    if saveResult.startswith("y" or "Y"):
+    if saveResult.startswith("y") or saveResult.startswith("Y"):
         global log
         log = input("[~] Step 1.1: What would be the name of this text file : ")
         print ("\n" + "  " + "»" * 78 + "\n")
