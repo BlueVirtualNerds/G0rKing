@@ -3,8 +3,11 @@
 # pyfiglet only supports Python3
 
 # Capstone Project #
+#!/usr/bin/env/python3
+# This Python file uses the following encoding: utf-8
+# pyfiglet only supports Python3
 
-
+# Capstone Project #
 
 from __future__ import print_function
 try:
@@ -18,7 +21,7 @@ import time
 
 
 # SaUR0n Core Code
-
+log = "latestrun" + str(time.time())
 
 if sys.version[0] in "2":
     print ("\n[x] SaUR0n has not been developed for python 2.x Use Python 3.x \n")
@@ -31,43 +34,57 @@ ascii_banner = pyfiglet.figlet_format("SaUR0n")
 print(ascii_banner)
 
 print("\t Author: Blue Virtual Nerds \n")
-print("\t Website: http://www.sauron.in \n")
+print("\t Website: https://www.sauron.in \n")
 print("\t GitHub: https://github.com/BlueVirtualNerds/SaUR0N \n")
 print("\t A project for : IITK COHORT-3 \n")
 
 
-try:
-    data = input("\n[+] Step 1: Would you like to save the Results ? (y/n) ").strip()
-    log = ("")
+def menu():
+    print("\t ******* Welcome to Sauron ******* \n")
+    print()
 
-except KeyboardInterrupt:
-        print ("\n")
-        print ("\033[1;91m[!] User Interruption Detected..!\033[0")
+    choice = input("\t1 : Generic Dorking Tool \n \t2 : URL Probing Dorking Tool \n \tX : Quit \n" +
+                        "\n\tPlease Enter your Choice: ")
+    if choice == "1":
+        fileSavingChoice()
+        dorks()
+    elif choice == "2":
+        fileSavingChoice()
+        URlprober()
+    elif choice == "X" or choice == "x":
+        print("\n")
+        print("\033[1;91m[!] Exiting Sauron\033[0")
         time.sleep(0.5)
-        print ("\n\n\t\033[1;91m[!] Would love to see you back...Thanks!!! \033\n\n")
+        print("\n\n\t\033[1;91m[!] Would love to see you back...Thanks!!! \033\n\n")
         time.sleep(0.5)
         sys.exit(1)
 
+def fileSavingChoice():
+    try:
+        saveResult = input("\n[+] Step 1: Would you like to save the Results ? (y/n) ").strip()
 
-def logger(data):
-    file = open((log) + ".txt", "a")
-    file.write(str(data))
-    file.write("\n")
-    file.close()
+    except KeyboardInterrupt:
+            print ("\n")
+            print ("\033[1;91m[!] User Interruption Detected..!\033[0")
+            time.sleep(0.5)
+            print ("\n\n\t\033[1;91m[!] Would love to see you back...Thanks!!! \033\n\n")
+            time.sleep(0.5)
+            sys.exit(1)
 
 
-if data.startswith("y" or "Y"):
-    log = input("[~] Step 1.1: What would be the name of this text file : ")
-    print ("\n" + "  " + "»" * 78 + "\n")
-else:
-    print ("[!] Not saving the results...")
-    print ("\n" + "  " + "»" * 78 + "\n")
 
+    if saveResult.startswith("y" or "Y"):
+        global log
+        log = input("[~] Step 1.1: What would be the name of this text file : ")
+        print ("\n" + "  " + "»" * 78 + "\n")
+    else:
+        print ("[!] Not saving the results...")
+        print ("\n" + "  " + "»" * 78 + "\n")
 
 def dorks():
     try:
         dork = input("\n[+] Step 2: Enter Your Dork Search Query/String: ")
-        amount = input("[+] Step 3: How many websites do you want to display ?: ")
+        amount = input("[+] Step 3: How many search results do you want to display/save ?: ")
         print ("\n ")
 
         cycle = 0
@@ -98,7 +115,58 @@ def dorks():
     print ("\t\t\033[1;91m[!] Hope you loved the Tool !!! \033\n\n")
     sys.exit()
 
+def URlprober():
+    try:
+        url = input("\n[+] Step 2: Enter the URL to be probed ? (enter without http(s) / www) ").strip()
+        noOfResults = 10
+        dorkingQueryFile = open('dorkingtopdb.txt', 'r')
+        dorkingQueries = dorkingQueryFile.read().split('\n')
+
+        cycle = 0
+        counter = 0
+        for dorkQuery in dorkingQueries:
+            infodata = ("Scanning....", dorkQuery)
+            print(infodata)
+            logger(infodata)
+            dorkQuery = dorkQuery + " " + "siteurl:"+url
+            time.sleep(10)
+            for results in search(dorkQuery, num=int(noOfResults), pause=2):
+                counter = counter + 1
+                print("[+] ", counter, results)
+                time.sleep(0.1)
+                cycle = cycle + 1
+                data = (counter, results)
+                logger(data)
+                if cycle >= int(noOfResults):
+                    break
+
+                time.sleep(0.1)
+
+    except KeyboardInterrupt:
+            print ("\n")
+            print ("\033[1;91m[!] Interruption Detected..!\033[0")
+            time.sleep(0.5)
+            print ("\n\n\t\033[1;91m[!] Would love to see you back!! \033\n\n")
+            time.sleep(0.5)
+            sys.exit(1)
+
+    print("[•] Done... Exiting...")
+    print("\n\t\t\t\t\033[34mSaUR0n\033[0m")
+    print("\t\t\033[1;91m[!] Hope you loved the Tool !!! \033\n\n")
+    sys.exit()
+
+
+def logger(data):
+    file = open((log) + ".txt", "a")
+    file.write(str(data))
+    file.write("\n")
+    file.close()
+
+
 
 #********# Main #*********#
 if __name__ == "__main__":
-    dorks()
+    menu()
+
+
+
