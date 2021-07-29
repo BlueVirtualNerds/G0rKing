@@ -15,9 +15,12 @@ except ImportError:
 import sys
 import time
 import pyfiglet
+from tqdm import tqdm
+
 
 # SaUR0n Core Code
 log = "latestrun" + str(time.time())
+saveResult = "n"
 
 if sys.version[0] in "2":
     print ("\n[x] SaUR0n has not been developed for python 2.x Use Python 3.x \n")
@@ -57,6 +60,7 @@ def menu():
 
 def fileSavingChoice():
     try:
+        global saveResult
         saveResult = input("\n[+] Step 1: Would you like to save the Results ? (y/n) ").strip()
 
     except KeyboardInterrupt:
@@ -84,20 +88,28 @@ def dorks():
         print ("\n ")
 
         cycle = 0
-        counter = 0
+        counter = 1
 
+        #for i in trange(20, desc = 'Dorking...'):
+        #    time.sleep(0.3)
+
+        p_bar = tqdm(range(int(amount)),desc='Dorking...',leave=True)
+        urllist =[]
         for results in search(dork, num=int(amount), pause=2):
-            counter = counter + 1
-            print ("[+] ", counter, results)
-            time.sleep(0.1)
+            resulturl = "[+] " + str(counter) + " "+ str(results)
+            urllist.append(resulturl)
             cycle = cycle + 1
+            counter = counter + 1
+            p_bar.update(cycle)
+            p_bar.refresh()
+            time.sleep(0.5)
             data = (counter, results)
-            logger(data)
+            if saveResult.startswith("y") or saveResult.startswith("Y"):
+                logger(data)
             if cycle >= int(amount):
                 break
 
-            time.sleep(0.1)
-
+        print(*urllist, sep = "\n")
     except KeyboardInterrupt:
             print ("\n")
             print ("\033[1;91m[!] Interruption Detected..!\033[0")
@@ -120,24 +132,26 @@ def URlprober():
 
         cycle = 0
         counter = 0
-        for dorkQuery in dorkingQueries:
-            infodata = ("Scanning....", dorkQuery)
+        for dorkQuery in tqdm(dorkingQueries):
+            infodata = "Scanning...." + dorkQuery
+            print("\n")
             print(infodata)
             logger(infodata)
             dorkQuery = dorkQuery + " " + "siteurl:"+url
-            time.sleep(10)
+
             for results in search(dorkQuery, num=int(noOfResults), pause=2):
                 counter = counter + 1
                 print("[+] ", counter, results)
                 time.sleep(0.1)
                 cycle = cycle + 1
                 data = (counter, results)
-                logger(data)
+                if saveResult.startswith("y") or saveResult.startswith("Y"):
+                    logger(data)
                 if cycle >= int(noOfResults):
                     break
 
                 time.sleep(0.1)
-
+            time.sleep(10)
     except KeyboardInterrupt:
             print ("\n")
             print ("\033[1;91m[!] Interruption Detected..!\033[0")
