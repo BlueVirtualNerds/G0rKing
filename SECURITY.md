@@ -5,6 +5,7 @@
 <p>The purpose of this tool is strictly for educational purposes ONLY</p>
 <br> 
 <b>The Authors, Contributors and/or any entity within the project scope do not permit or approve any illegal usage of the tool.<b>
+<br>
 <i><b>The user of the tool ("Sauron") in context will henceforth be solely responsible for any such activities which is outsise the above mentioned permissible zone</i></b>
 
 
