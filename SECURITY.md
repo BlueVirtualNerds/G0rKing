@@ -1,6 +1,6 @@
 # Security Policy
 
-## Supported Versions
+## Reach Out
 
 To all the cool folks out there we would want to collab with you to make this project grow in scope and capacity.
 Please let us know what you liked and what you didn't!!!
