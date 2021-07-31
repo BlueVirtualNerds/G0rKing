@@ -2,11 +2,11 @@
 
 # Important:
 
-<p>The purpose of this tool is strictly for education purposes.</p>
+<p>The purpose of this tool is strictly for education purposes ONLY</p>
 <br> 
 <b>The Authors, Contributors and/or any entity within the project scope do not permit or approve any illegal usage of the tool.<b>
-<br>
-<i><b>The user of the tool will henceforth be solely responsible for any such activities which are outsise the above mentioned permissible zone</i></b>
+  <br>
+<i><b>The user of the tool will henceforth be solely responsible for any such activities which is outsise the above mentioned permissible zone</i></b>
 
 
 ## Reach Out
