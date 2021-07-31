@@ -9,4 +9,4 @@ Please let us know what you liked and what you didn't!!!
 
 If you find an issue in our repo/code, please be generous to inform us right away.
 
-For any issues related to Github, you can always use the GitHub Boundhttps://bounty.github.com/
+For any issues related to Github, you can always use the GitHub Bounty Program at - https://bounty.github.com/
