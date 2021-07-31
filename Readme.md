@@ -8,6 +8,7 @@
 					#### Objective ####:
 
 > The objective of SaUR0N is to automate the Google Dorking process and offers a way to save the end results in a text file for easy reference and reporting purposes.
+> It can also automate the process of checking one URL against multiple dorks and can hence provide a quick health check.
 
 
 					#### Project Content ####:
