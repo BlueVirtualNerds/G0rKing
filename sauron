@@ -17,7 +17,6 @@ import time
 import pyfiglet
 from tqdm import tqdm
 
-
 # SaUR0n Core Code
 log = "latestrun" + str(time.time())
 saveResult = "n"
@@ -90,18 +89,12 @@ def dorks():
         cycle = 0
         counter = 1
 
-        #for i in trange(20, desc = 'Dorking...'):
-        #    time.sleep(0.3)
-
-        p_bar = tqdm(range(int(amount)),desc='Dorking...',leave=True)
         urllist =[]
-        for results in search(dork, num=int(amount), pause=2):
+        for results in tqdm(search(dork, num=int(amount), pause=2),total=int(amount), desc='Dorking...',leave=False):
             resulturl = "[+] " + str(counter) + " "+ str(results)
             urllist.append(resulturl)
             cycle = cycle + 1
             counter = counter + 1
-            p_bar.update(cycle)
-            p_bar.refresh()
             time.sleep(0.5)
             data = (counter, results)
             if saveResult.startswith("y") or saveResult.startswith("Y"):
@@ -132,26 +125,29 @@ def URlprober():
 
         cycle = 0
         counter = 0
+        resultlist = []
         for dorkQuery in tqdm(dorkingQueries):
             infodata = "Scanning...." + dorkQuery
-            print("\n")
-            print(infodata)
             logger(infodata)
+            resultlist.append(infodata)
             dorkQuery = dorkQuery + " " + "siteurl:"+url
 
             for results in search(dorkQuery, num=int(noOfResults), pause=2):
                 counter = counter + 1
-                print("[+] ", counter, results)
+
+                resulturl = "[+] " + str(counter) + " " + str(results)
                 time.sleep(0.1)
                 cycle = cycle + 1
-                data = (counter, results)
+                
+                resultlist.append(resulturl)
                 if saveResult.startswith("y") or saveResult.startswith("Y"):
-                    logger(data)
+                    logger(resulturl)
                 if cycle >= int(noOfResults):
                     break
 
                 time.sleep(0.1)
             time.sleep(10)
+        print(*resultlist, sep="\n")
     except KeyboardInterrupt:
             print ("\n")
             print ("\033[1;91m[!] Interruption Detected..!\033[0")
