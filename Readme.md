@@ -1,7 +1,7 @@
 					#### Purpose ####:
 
 > SaUR0N was created as the Capstone Project delivery for the completion of the COHORT-3 course and certification.
-> COHORT-3 was offered through the joint initiative of C3i Center (IIT, Kanpur and Talentsprint in the year 2021.
+> COHORT-3 was offered through the joint initiative of C3i Center (IIT, Kanpur) and Talentsprint in the year 2021.
 > The course title is "Advanced Certification Program in Cyber Security and Cyber Defense"
 
 
