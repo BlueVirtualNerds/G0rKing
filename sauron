@@ -87,14 +87,14 @@ def dorks():
         print ("\n ")
 
         cycle = 0
-        counter = 1
+        counter = 0
 
         urllist =[]
         for results in tqdm(search(dork, num=int(amount), pause=2),total=int(amount), desc='Dorking...',leave=False):
-            resulturl = "[+] " + str(counter) + " "+ str(results)
-            urllist.append(resulturl)
             cycle = cycle + 1
             counter = counter + 1
+            resulturl = "[+] " + str(counter) + " "+ str(results)
+            urllist.append(resulturl)
             time.sleep(0.5)
             data = (counter, results)
             if saveResult.startswith("y") or saveResult.startswith("Y"):
