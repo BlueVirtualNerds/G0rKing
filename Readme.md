@@ -44,7 +44,7 @@ Follow the commands now ...
 $ git clone https://github.com/BlueVirtualNerds/G0rKing
 $ cd G0rKing
 $ pip3 install -r requirements.txt
-$ python3 sauron
+$ python3 G0rKing
 ```
 .....and now follow the on-screen guide
 
