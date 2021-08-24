@@ -1,25 +1,24 @@
 					#### Purpose ####:
 
-> SaUR0N was created as the Capstone Project delivery for the completion of the COHORT-3 course and certification.
+> G0rKing was created as the Capstone Project delivery for the completion of the COHORT-3 course and certification.
 > COHORT-3 was offered through the joint initiative of C3i Center (IIT, Kanpur) and Talentsprint in the year 2021.
 > The course title is "Advanced Certification Program in Cyber Security and Cyber Defense"
 
 
 					#### Objective ####:
 
-> The objective of SaUR0N is to automate the Google Dorking process and offers a way to save the end results in a text file for easy reference and reporting purposes.
+> The objective of G0rKing is to automate the Google Dorking process and offers a way to save the end results in a text file for easy reference and reporting purposes.
 > It can also automate the process of checking one URL against multiple dorks and can hence provide a quick health check.
 
 
-					#### Project Content ####:
+					#### Inital Project Content ####:
 
-1. SaUR0N - Google Dorking Tool written in Python3
+1. G0rKing - Google Dorking Tool written in Python3
 2. Google and PyFiglet - Installable Requirements
 3. Google Dorking Usage and Easy Reference - Text File
-4. Website hosting the educational content - http://www.sauron.in
 
 
-					#### The Project Team members ####
+					#### Initial Project Team Members for COHORT-3 ####
 <br> 
     
 <li> Vishal Soni </li>
@@ -38,12 +37,12 @@
 --------------------------------------
 
 
-<h1> How to run SaUR0N </h1>
+<h1> How to run G0rKing </h1>
 
 Follow the commands now ...
 ```
-$ git clone https://github.com/BlueVirtualNerds/SaUR0N
-$ cd SaUR0N
+$ git clone https://github.com/PrateekOWASP/G0rKing
+$ cd G0rKing
 $ pip3 install -r requirements.txt
 $ python3 sauron
 ```

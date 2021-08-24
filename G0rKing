@@ -1,0 +1,176 @@
+#!/usr/bin/env/python3
+# This Python file uses the following encoding: utf-8
+# pyfiglet only supports Python3
+
+
+# Capstone Project #
+
+from __future__ import print_function
+try:
+    from googlesearch import search
+
+except ImportError:
+    print("")
+
+import sys
+import time
+import pyfiglet
+from tqdm import tqdm
+
+# G0rKing  Core Code
+log = "latestrun" + str(time.time())
+saveResult = "n"
+
+if sys.version[0] in "2":
+    print ("\n[x] G0rKing  has not been developed for python 2.x Use Python 3.x \n")
+    print ("\n\n OSINT is always the best!!!\n\n")
+    exit()
+
+
+
+ascii_banner = pyfiglet.figlet_format("G0rKing")
+print(ascii_banner)
+
+print("\t Website: https://owasp.org/www-project-g0rking/ \n")
+print("\t GitHub: https://github.com/PrateekOWASP/G0rKing \n")
+
+
+def menu():
+    print("\t ******* Welcome to G0rKing  ******* \n")
+    print()
+
+    choice = input("\t1 : Generic Dorking Tool \n \t2 : URL Probing Dorking Tool \n \tX : Quit \n" +
+                        "\n\tPlease Enter your Choice: ")
+    if choice == "1":
+        fileSavingChoice()
+        dorks()
+    elif choice == "2":
+        fileSavingChoice()
+        URlprober()
+    elif choice == "X" or choice == "x":
+        print("\n")
+        print("\033[1;91m[!] Exiting G0rKing \033[0")
+        time.sleep(0.5)
+        print("\n\n\t\033[1;91m[!] Would love to see you back...Thanks!!! \033\n\n")
+        time.sleep(0.5)
+        sys.exit(1)
+
+def fileSavingChoice():
+    try:
+        global saveResult
+        saveResult = input("\n[+] Step 1: Would you like to save the Results ? (y/n) ").strip()
+
+    except KeyboardInterrupt:
+            print ("\n")
+            print ("\033[1;91m[!] User Interruption Detected..!\033[0")
+            time.sleep(0.5)
+            print ("\n\n\t\033[1;91m[!] Would love to see you back...Thanks!!! \033\n\n")
+            time.sleep(0.5)
+            sys.exit(1)
+
+
+
+    if saveResult.startswith("y") or saveResult.startswith("Y"):
+        global log
+        log = input("[~] Step 1.1: What would be the name of this text file : ")
+        print ("\n" + "  " + "»" * 78 + "\n")
+    else:
+        print ("[!] Not saving the results...")
+        print ("\n" + "  " + "»" * 78 + "\n")
+
+def dorks():
+    try:
+        dork = input("\n[+] Step 2: Enter Your Dork Search Query/String: ")
+        amount = input("[+] Step 3: How many search results do you want to display/save ?: ")
+        print ("\n ")
+
+        cycle = 0
+        counter = 0
+
+        urllist =[]
+        for results in tqdm(search(dork, num=int(amount), pause=2),total=int(amount), desc='Dorking...',leave=False):
+            cycle = cycle + 1
+            counter = counter + 1
+            resulturl = "[+] " + str(counter) + " "+ str(results)
+            urllist.append(resulturl)
+            time.sleep(0.5)
+            data = (counter, results)
+            if saveResult.startswith("y") or saveResult.startswith("Y"):
+                logger(data)
+            if cycle >= int(amount):
+                break
+
+        print(*urllist, sep = "\n")
+    except KeyboardInterrupt:
+            print ("\n")
+            print ("\033[1;91m[!] Interruption Detected..!\033[0")
+            time.sleep(0.5)
+            print ("\n\n\t\033[1;91m[!] Would love to see you back!! \033\n\n")
+            time.sleep(0.5)
+            sys.exit(1)
+
+    print ("[•] Done... Exiting...")
+    print ("\n\t\t\t\t\033[34mG0rKing\033[0m")
+    print ("\t\t\033[1;91m[!] Hope you loved the Tool !!! \033\n\n")
+    sys.exit()
+
+def URlprober():
+    try:
+        url = input("\n[+] Step 2: Enter the URL to be probed ? (enter without http(s) / www) ").strip()
+        noOfResults = 10
+        dorkingQueryFile = open('dorkingtopdb.txt', 'r')
+        dorkingQueries = dorkingQueryFile.read().split('\n')
+
+        cycle = 0
+        counter = 0
+        resultlist = []
+        for dorkQuery in tqdm(dorkingQueries):
+            infodata = "Scanning...." + dorkQuery
+            logger(infodata)
+            resultlist.append(infodata)
+            dorkQuery = dorkQuery + " " + "siteurl:"+url
+
+            for results in search(dorkQuery, num=int(noOfResults), pause=2):
+                counter = counter + 1
+
+                resulturl = "[+] " + str(counter) + " " + str(results)
+                time.sleep(0.1)
+                cycle = cycle + 1
+                
+                resultlist.append(resulturl)
+                if saveResult.startswith("y") or saveResult.startswith("Y"):
+                    logger(resulturl)
+                if cycle >= int(noOfResults):
+                    break
+
+                time.sleep(0.1)
+            time.sleep(10)
+        print(*resultlist, sep="\n")
+    except KeyboardInterrupt:
+            print ("\n")
+            print ("\033[1;91m[!] Interruption Detected..!\033[0")
+            time.sleep(0.5)
+            print ("\n\n\t\033[1;91m[!] Would love to see you back!! \033\n\n")
+            time.sleep(0.5)
+            sys.exit(1)
+
+    print("[•] Done... Exiting...")
+    print("\n\t\t\t\t\033[34mG0rKing\033[0m")
+    print("\t\t\033[1;91m[!] Hope you loved the Tool !!! \033\n\n")
+    sys.exit()
+
+
+def logger(data):
+    file = open((log) + ".txt", "a")
+    file.write(str(data))
+    file.write("\n")
+    file.close()
+
+
+
+#********# Main #*********#
+if __name__ == "__main__":
+    menu()
+
+
+
